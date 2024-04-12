@@ -891,6 +891,24 @@
       <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.0.9" />
       <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.0-alpha1" />
       <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.0-beta1" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.0-rc1" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.1" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.2" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.3" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.4" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.5" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.6" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.7" />
+      <version md5="691aa124e75e020b4cdcf9ae71a682a0" nb="10.1.8" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.0" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.0-alpha1" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.0-beta1" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.0-rc1" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.1" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.2" />
+      <version md5="a0044571a43c8576861b8dd7f13bd8be" nb="10.2.3" />
+      <version md5="e1f331633bd52cb37c681f20ceccf59a" nb="10.2.4" />
+      <version md5="e1f331633bd52cb37c681f20ceccf59a" nb="10.2.5" />
     </file>
     <file url="core/misc/tabledrag.js">
       <version md5="0cca2b112be4faa860fd70a74fa3ec26" nb="8.0-alpha2" />
