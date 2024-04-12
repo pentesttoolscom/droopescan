@@ -2275,6 +2275,7 @@
       <version md5="3b764377a7b8099b61cd1d7539b2e3aa" nb="9.3.19" />
       <version md5="3b764377a7b8099b61cd1d7539b2e3aa" nb="9.3.20" />
       <version md5="3b764377a7b8099b61cd1d7539b2e3aa" nb="9.3.21" />
+      <version md5="3b764377a7b8099b61cd1d7539b2e3aa" nb="9.3.22" />
       <version md5="3b764377a7b8099b61cd1d7539b2e3aa" nb="9.4.0" />
       <version md5="ed014a0ed1a818b410b96d2585646a66" nb="9.4.0-alpha1" />
       <version md5="90964abb457592607fb6b88f7cc42c4a" nb="9.4.0-beta1" />
@@ -2309,6 +2310,9 @@
       <version md5="9347cc7e6cf699da6f4530a116614200" nb="9.5.7" />
       <version md5="9347cc7e6cf699da6f4530a116614200" nb="9.5.8" />
       <version md5="9347cc7e6cf699da6f4530a116614200" nb="9.5.9" />
+      <version md5="9347cc7e6cf699da6f4530a116614200" nb="9.5.10" />
+      <version md5="9347cc7e6cf699da6f4530a116614200" nb="9.5.11" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.0" />
       <version md5="1ca6bc0d7b38d7eecf927d7a9d664f49" nb="10.0.0-alpha1" />
       <version md5="ac136d2d5771e2de2b5abbf30ec9b36e" nb="10.0.0-alpha2" />
       <version md5="dafb830b9191667683908e5693b5f908" nb="10.0.0-alpha3" />
@@ -2330,8 +2334,29 @@
       <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.7" />
       <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.8" />
       <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.9" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.10" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.0.11" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.0" />
       <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.0-alpha1" />
       <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.0-beta1" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.0-rc1" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.1" />
+      <version md5="70569ba31489dcad5354966937f6713d" nb="10.1.2" />
+      <version md5="08f027331329fecb1ebe2c6ed5b8e231" nb="10.1.3" />
+      <version md5="08f027331329fecb1ebe2c6ed5b8e231" nb="10.1.4" />
+      <version md5="81332d69a16a702155a819d04cec1614" nb="10.1.5" />
+      <version md5="81332d69a16a702155a819d04cec1614" nb="10.1.6" />
+      <version md5="81332d69a16a702155a819d04cec1614" nb="10.1.7" />
+      <version md5="81332d69a16a702155a819d04cec1614" nb="10.1.8" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.0" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.0-alpha1" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.0-beta1" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.0-rc1" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.1" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.2" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.3" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.4" />
+      <version md5="6dd24f7be1ab96c23d6237ba86970e8c" nb="10.2.5" />
 	  </file>
     <file url="core/yarn.lock">
       <version md5="d67028a4e0fa21c09dbad754c033b000" nb="9.4.0" />
