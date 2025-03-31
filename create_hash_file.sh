@@ -6,7 +6,7 @@ vergte() {
     [  "$1" = "`echo -e "$2\n$1" | sort -rV | head -n1`" ]
 }
 
-url_file_paths=("misc/drupal.js" "misc/tabledrag.js" "misc/tableheader.js" "misc/ajax.js" "core/misc/drupal.js" "core/misc/tabledrag.js" "core/misc/tableheader.js" "core/misc/states.js" "core/misc/ajax.js" "core/misc/vertical-tabs.js" "core/modules/ckeditor5/js/build/drupalImage.js" "core/modules/ckeditor5/js/build/drupalMedia.js" "core/assets/vendor/ckeditor/ckeditor.js" "core/yarn.lock" "core/modules/big_pipe/js/big_pipe.js")
+url_file_paths=("misc/drupal.js" "misc/tabledrag.js" "misc/tableheader.js" "misc/ajax.js" "core/misc/drupal.js" "core/misc/tabledrag.js" "core/misc/tableheader.js" "core/misc/states.js" "core/misc/ajax.js" "core/misc/vertical-tabs.js" "core/modules/ckeditor5/js/build/drupalImage.js" "core/modules/ckeditor5/js/build/drupalMedia.js" "core/assets/vendor/ckeditor/ckeditor.js" "core/yarn.lock")
 changelog_file_paths=("CHANGELOG.txt" "core/CHANGELOG.txt")
 output_file="../dscan/plugins/drupal/versions.xml"
 
