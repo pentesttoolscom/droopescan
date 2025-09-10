@@ -1,6 +1,7 @@
 name: "Update Drupal Fingerprint"
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     # Run every Monday at 10:00 AM Romania time (8:00 AM UTC)
