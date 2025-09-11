@@ -61,7 +61,7 @@ jobs:
         id: cpr
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update Drupal fingerprints with new versions"
+          commit-message: "chore[bot]: update Drupal fingerprints with new versions"
           title: "Update Drupal Fingerprints - New Versions Detected"
           body: |
             ## Automated Drupal Fingerprint Update
@@ -77,8 +77,8 @@ jobs:
           delete-branch: true
           add-paths: |
             dscan/plugins/drupal/versions.xml
-          committer: Drupal Update Automation <drupal-bot@pentesttools.com>
-          author: Drupal Update Automation <drupal-bot@pentesttools.com>
+          committer: Drupal Update Automation <108682220+mihai-pasca@users.noreply.github.com>
+          author: Drupal Update Automation <108682220+mihai-pasca@users.noreply.github.com>
           signoff: true
 
       - name: Send GitHub Action trigger data to Slack workflow
