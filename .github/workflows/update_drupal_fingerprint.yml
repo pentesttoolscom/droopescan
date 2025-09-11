@@ -61,17 +61,14 @@ jobs:
         id: cpr
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore[bot]: update Drupal fingerprints with new versions"
-          title: "Update Drupal Fingerprints - New Versions Detected"
+          commit-message: "chore[bot]: update drupal fingerprints"
+          title: "chore[bot]: update drupal fingerprints"
           body: |
             ## Automated Drupal Fingerprint Update
 
             This PR was automatically created because new Drupal versions were detected.
 
-            ### Changes:
-            - Updated Drupal version fingerprints
-
-            Please review and merge if the changes look correct.
+            Please check the versions.xml file to make sure the format is fine and merge if everything is OK.
           branch: update-drupal-fingerprints-${{ github.run_number }}
           base: ${{ github.event.repository.default_branch }}
           delete-branch: true
