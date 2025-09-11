@@ -46,6 +46,15 @@ jobs:
             echo "No changes detected in dscan/plugins/drupal/versions.xml"
           fi
 
+      - name: Setup GPG
+        if: steps.git-check.outputs.changes == 'true'
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
       - name: Create Pull Request
         if: steps.git-check.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v5
@@ -68,6 +77,9 @@ jobs:
           delete-branch: true
           add-paths: |
             dscan/plugins/drupal/versions.xml
+          committer: Drupal Update Automation <drupal-bot@pentesttools.com>
+          author: Drupal Update Automation <drupal-bot@pentesttools.com>
+          signoff: true
 
       - name: Send GitHub Action trigger data to Slack workflow
         if: steps.git-check.outputs.changes == 'true'
