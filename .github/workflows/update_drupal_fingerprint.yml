@@ -61,6 +61,7 @@ jobs:
 
             Please review and merge if the changes look correct.
           branch: update-drupal-fingerprints-${{ github.run_number }}
+          base: ${{ github.event.repository.default_branch }}
           delete-branch: true
           add-paths: |
             dscan/plugins/drupal/versions.xml
