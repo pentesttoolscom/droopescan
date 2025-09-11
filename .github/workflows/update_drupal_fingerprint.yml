@@ -38,9 +38,12 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code --quiet dscan/plugins/drupal/versions.xml || echo "changes=true" >> $GITHUB_OUTPUT
-          if [ "$?" -ne 0 ]; then
+          if ! git diff --exit-code --quiet dscan/plugins/drupal/versions.xml; then
+            echo "changes=true" >> $GITHUB_OUTPUT
             echo "Changes detected in dscan/plugins/drupal/versions.xml"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in dscan/plugins/drupal/versions.xml"
           fi
 
       - name: Create Pull Request
@@ -75,5 +78,5 @@ jobs:
         with:
           payload: |
             {
-              "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }},
+              "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }}
             }
