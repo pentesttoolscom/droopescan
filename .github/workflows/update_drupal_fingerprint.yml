@@ -97,6 +97,6 @@ jobs:
             await github.rest.actions.updateRepoVariable({
               owner: 'pentesttoolscom',
               repo: 'Pentest-Tools.com',
-              variable_name: 'FORCE_DRUPAL_BUILD',
+              name: 'FORCE_DRUPAL_BUILD',
               value: '${{ steps.git-check.outputs.changes }}'
             });
