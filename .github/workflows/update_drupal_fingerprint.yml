@@ -89,3 +89,14 @@ jobs:
             {
               "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }}
             }
+      - name: Update FORCE_DRUPAL_BUILD variable
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.updateRepoVariable({
+              owner: 'pentesttoolscom',
+              repo: 'Pentest-Tools.com',
+              variable_name: 'FORCE_DRUPAL_BUILD',
+              value: '${{ steps.git-check.outputs.changes }}'
+            });
