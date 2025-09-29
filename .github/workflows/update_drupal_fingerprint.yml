@@ -35,6 +35,10 @@ jobs:
           chmod +x ./create_hash_file.sh
           ./create_hash_file.sh
 
+      - name: Add test line to versions.xml
+        run: |
+          echo "<!-- Test line added on $(date) -->" >> dscan/plugins/drupal/versions.xml
+
       - name: Check for changes
         id: git-check
         run: |
