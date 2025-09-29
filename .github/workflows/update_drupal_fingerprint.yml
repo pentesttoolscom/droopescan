@@ -4,8 +4,8 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    # Run every Monday at 10:00 AM Romania time (8:00 AM UTC)
-    - cron: "0 8 * * 1"
+    # Run every Monday at 10:00 AM EEST and 9:00 AM EET (7:00 AM UTC)
+    - cron: "0 7 * * 1"
 
 jobs:
   update_drupal_fingerprint:
@@ -40,10 +40,10 @@ jobs:
         run: |
           if ! git diff --exit-code --quiet dscan/plugins/drupal/versions.xml; then
             echo "changes=true" >> $GITHUB_OUTPUT
-            echo "Changes detected in dscan/plugins/drupal/versions.xml"
+            echo "Changes detected in dscan/plugins/drupal/versions.xml, will create a pull request."
           else
             echo "changes=false" >> $GITHUB_OUTPUT
-            echo "No changes detected in dscan/plugins/drupal/versions.xml"
+            echo "No changes detected in dscan/plugins/drupal/versions.xml, will not create a pull request"
           fi
 
       - name: Setup GPG
@@ -69,13 +69,14 @@ jobs:
             This PR was automatically created because new Drupal versions were detected.
 
             Please check the versions.xml file to make sure the format is fine and merge if everything is OK.
+            After merging, the FORCE_DRUPAL_BUILD also needs to be updated to true, atm it is not done automatically.
           branch: update-drupal-fingerprints-${{ github.run_number }}
           base: ${{ github.event.repository.default_branch }}
           delete-branch: true
           add-paths: |
             dscan/plugins/drupal/versions.xml
-          committer: Drupal Update Automation <108682220+mihai-pasca@users.noreply.github.com>
-          author: Drupal Update Automation <108682220+mihai-pasca@users.noreply.github.com>
+          committer: ${{ vars.COMMIT_AUTHOR }}
+          author: ${{ vars.COMMIT_AUTHOR }}
           signoff: true
 
       - name: Send GitHub Action trigger data to Slack workflow
@@ -89,14 +90,15 @@ jobs:
             {
               "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }}
             }
-      - name: Update FORCE_DRUPAL_BUILD variable
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            await github.rest.actions.updateRepoVariable({
-              owner: 'pentesttoolscom',
-              repo: 'Pentest-Tools.com',
-              name: 'FORCE_DRUPAL_BUILD',
-              value: '${{ steps.git-check.outputs.changes }}'
-            });
+      # TODO: Create token to update the variable
+      # - name: Update FORCE_DRUPAL_BUILD variable
+      #   uses: actions/github-script@v7
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       await github.rest.actions.updateRepoVariable({
+      #         owner: 'pentesttoolscom',
+      #         repo: 'Pentest-Tools.com',
+      #         name: 'FORCE_DRUPAL_BUILD',
+      #         value: '${{ steps.git-check.outputs.changes }}'
+      #       });
