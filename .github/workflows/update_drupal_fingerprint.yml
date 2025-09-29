@@ -1,7 +1,6 @@
 name: "Update Drupal Fingerprint"
 
 on:
-  pull_request:
   workflow_dispatch:
   schedule:
     # Run every Monday at 10:00 AM EEST and 9:00 AM EET (7:00 AM UTC)
@@ -34,10 +33,6 @@ jobs:
         run: |
           chmod +x ./create_hash_file.sh
           ./create_hash_file.sh
-
-      - name: Add test line to versions.xml
-        run: |
-          echo "<!-- Test line added on $(date) -->" >> dscan/plugins/drupal/versions.xml
 
       - name: Check for changes
         id: git-check
@@ -73,7 +68,8 @@ jobs:
             This PR was automatically created because new Drupal versions were detected.
 
             Please check the versions.xml file to make sure the format is fine and merge if everything is OK.
-            After merging, the FORCE_DRUPAL_BUILD also needs to be updated to true, atm it is not done automatically.
+
+            After merging, the FORCE_DRUPAL_BUILD variable needs to be updated to true on the main repo (atm it is not done automatically).
           branch: update-drupal-fingerprints-${{ github.run_number }}
           base: ${{ github.event.repository.default_branch }}
           delete-branch: true
