@@ -1,0 +1,104 @@
+name: "Update Drupal Fingerprint"
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every Monday at 10:00 AM EEST and 9:00 AM EET (7:00 AM UTC)
+    - cron: "0 7 * * 1"
+
+jobs:
+  update_drupal_fingerprint:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run create_hash_file.sh
+        run: |
+          chmod +x ./create_hash_file.sh
+          ./create_hash_file.sh
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if ! git diff --exit-code --quiet dscan/plugins/drupal/versions.xml; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in dscan/plugins/drupal/versions.xml, will create a pull request."
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in dscan/plugins/drupal/versions.xml, will not create a pull request"
+          fi
+
+      - name: Setup GPG
+        if: steps.git-check.outputs.changes == 'true'
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        id: cpr
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore[bot]: update drupal fingerprints"
+          title: "chore[bot]: update drupal fingerprints"
+          body: |
+            ## Automated Drupal Fingerprint Update
+
+            This PR was automatically created because new Drupal versions were detected.
+
+            Please check the versions.xml file to make sure the format is fine and merge if everything is OK.
+
+            After merging, the FORCE_DRUPAL_BUILD variable needs to be updated to true on the main repo (atm it is not done automatically).
+          branch: update-drupal-fingerprints-${{ github.run_number }}
+          base: ${{ github.event.repository.default_branch }}
+          delete-branch: true
+          add-paths: |
+            dscan/plugins/drupal/versions.xml
+          committer: ${{ vars.COMMIT_AUTHOR }}
+          author: ${{ vars.COMMIT_AUTHOR }}
+          signoff: true
+
+      - name: Send GitHub Action trigger data to Slack workflow
+        if: steps.git-check.outputs.changes == 'true'
+        id: slack
+        uses: slackapi/slack-github-action@v1.25.0
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_DRUPAL_FINGERPRINT}}
+        with:
+          payload: |
+            {
+              "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }}
+            }
+      # TODO: Create token to update the variable
+      # - name: Update FORCE_DRUPAL_BUILD variable
+      #   uses: actions/github-script@v7
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       await github.rest.actions.updateRepoVariable({
+      #         owner: 'pentesttoolscom',
+      #         repo: 'Pentest-Tools.com',
+      #         name: 'FORCE_DRUPAL_BUILD',
+      #         value: '${{ steps.git-check.outputs.changes }}'
+      #       });
