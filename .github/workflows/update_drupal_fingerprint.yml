@@ -100,5 +100,5 @@ jobs:
               owner: 'pentesttoolscom',
               repo: 'Pentest-Tools.com',
               name: 'FORCE_DRUPAL_BUILD',
-              value: 'false'
+              value: 'true'
             });
