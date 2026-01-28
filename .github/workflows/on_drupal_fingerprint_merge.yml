@@ -1,0 +1,26 @@
+name: "On Drupal Fingerprint Merge"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_force_drupal_build:
+    if: startsWith(github.head_ref, 'update-drupal-fingerprints-')
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Update FORCE_DRUPAL_BUILD variable
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PENTESTTOOLS_COM_TOKEN }}
+          script: |
+            await github.rest.actions.updateRepoVariable({
+              owner: 'pentesttoolscom',
+              repo: 'Pentest-Tools.com',
+              name: 'FORCE_DRUPAL_BUILD',
+              value: 'true'
+            });
+
+      - name: Log success
+        run: echo "FORCE_DRUPAL_BUILD variable has been set to true"
