@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'dscan/plugins/drupal/versions.xml'
 
 jobs:
   update_force_drupal_build:
-    if: contains(github.event.head_commit.modified, 'dscan/plugins/drupal/versions.xml')
     runs-on: ubuntu-22.04
     steps:
       - name: Update FORCE_DRUPAL_BUILD variable
