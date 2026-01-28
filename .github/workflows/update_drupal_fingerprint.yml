@@ -5,9 +5,7 @@ on:
   schedule:
     # Run every Monday at 10:00 AM EEST and 9:00 AM EET (7:00 AM UTC)
     - cron: "0 7 * * 1"
-  pull_request:
-    types: [opened]
-
+    # trigger the pipeline when creating a PR that needs to be merged to master branch
 
 jobs:
   update_drupal_fingerprint:
@@ -100,5 +98,5 @@ jobs:
               owner: 'pentesttoolscom',
               repo: 'Pentest-Tools.com',
               name: 'FORCE_DRUPAL_BUILD',
-              value: 'true'
+              value: 'false'
             });

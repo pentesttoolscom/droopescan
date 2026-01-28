@@ -7,7 +7,7 @@ on:
 
 jobs:
   update_force_drupal_build:
-    if: startsWith(github.head_ref, 'update-drupal-fingerprints-')
+    if: contains(github.event.head_commit.modified, 'dscan/plugins/drupal/versions.xml')
     runs-on: ubuntu-22.04
     steps:
       - name: Update FORCE_DRUPAL_BUILD variable
