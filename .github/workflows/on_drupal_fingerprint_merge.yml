@@ -6,9 +6,6 @@ on:
       - master
     paths:
       - 'dscan/plugins/drupal/versions.xml'
-  pull_request:
-    paths:
-      - 'dscan/plugins/drupal/versions.xml'
 
 jobs:
   update_force_drupal_build:
