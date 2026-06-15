@@ -90,7 +90,7 @@ jobs:
               "link": ${{ toJson(steps.cpr.outputs.pull-request-url) }}
             }
       - name: Update FORCE_DRUPAL_BUILD variable
-        uses: actions/github-script@v8
+        uses: actions/github-script@9
         with:
           github-token: ${{ secrets.PENTESTTOOLS_COM_TOKEN }}
           script: |
