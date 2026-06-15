@@ -82,9 +82,8 @@ jobs:
         if: steps.git-check.outputs.changes == 'true'
         id: slack
         uses: slackapi/slack-github-action@v3
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_DRUPAL_FINGERPRINT}}
         with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL_DRUPAL_FINGERPRINT }}
           webhook-type: webhook-trigger
           payload: |
             {
