@@ -1128,6 +1128,7 @@
       <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="10.6.15" />
       <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="10.6.16" />
       <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="10.6.17" />
+      <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="10.6.18" />
       <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="11.0.0" />
       <version md5="e1f331633bd52cb37c681f20ceccf59a" nb="11.0.0-alpha1" />
       <version md5="9f1fd3e4d2b79b105dbb8c8694d4410b" nb="11.0.0-beta1" />
@@ -1210,6 +1211,7 @@
       <version md5="d4593c15c2bd022cfb1e7997e743b756" nb="11.4.5" />
       <version md5="d4593c15c2bd022cfb1e7997e743b756" nb="11.4.6" />
       <version md5="d4593c15c2bd022cfb1e7997e743b756" nb="11.4.7" />
+      <version md5="d4593c15c2bd022cfb1e7997e743b756" nb="11.4.8" />
       <version md5="d4593c15c2bd022cfb1e7997e743b756" nb="12.0.0-alpha1" />
     </file>
     <file url="core/misc/tabledrag.js">
@@ -1661,6 +1663,7 @@
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="10.6.15" />
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="10.6.16" />
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="10.6.17" />
+      <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="10.6.18" />
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="11.0.0" />
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="11.0.0-alpha1" />
       <version md5="8b09c7fe077cff285db7a1c79e71fa68" nb="11.0.0-beta1" />
@@ -1743,6 +1746,7 @@
       <version md5="b0bd86c9bf812b18ab4bcbc2d44367bf" nb="11.4.5" />
       <version md5="b0bd86c9bf812b18ab4bcbc2d44367bf" nb="11.4.6" />
       <version md5="b0bd86c9bf812b18ab4bcbc2d44367bf" nb="11.4.7" />
+      <version md5="b0bd86c9bf812b18ab4bcbc2d44367bf" nb="11.4.8" />
       <version md5="b0bd86c9bf812b18ab4bcbc2d44367bf" nb="12.0.0-alpha1" />
     </file>
     <file url="core/misc/tableheader.js">
@@ -2582,6 +2586,7 @@
       <version md5="7e200a8847790d12f2a6bfe0aca111f0" nb="10.6.15" />
       <version md5="7e200a8847790d12f2a6bfe0aca111f0" nb="10.6.16" />
       <version md5="7e200a8847790d12f2a6bfe0aca111f0" nb="10.6.17" />
+      <version md5="7e200a8847790d12f2a6bfe0aca111f0" nb="10.6.18" />
       <version md5="7e200a8847790d12f2a6bfe0aca111f0" nb="11.0.0" />
       <version md5="ff4e7c1c6a29abae5908c70fd853d75f" nb="11.0.0-alpha1" />
       <version md5="ff4e7c1c6a29abae5908c70fd853d75f" nb="11.0.0-beta1" />
@@ -2664,6 +2669,7 @@
       <version md5="ad9e4b3855c3b6c6f1c31296bccaf8ef" nb="11.4.5" />
       <version md5="ad9e4b3855c3b6c6f1c31296bccaf8ef" nb="11.4.6" />
       <version md5="ad9e4b3855c3b6c6f1c31296bccaf8ef" nb="11.4.7" />
+      <version md5="ad9e4b3855c3b6c6f1c31296bccaf8ef" nb="11.4.8" />
       <version md5="ad9e4b3855c3b6c6f1c31296bccaf8ef" nb="12.0.0-alpha1" />
     </file>
     <file url="core/misc/ajax.js">
@@ -3115,6 +3121,7 @@
       <version md5="1d2ec8a70880f9a94ad3e0ed74bc23a7" nb="10.6.15" />
       <version md5="1d2ec8a70880f9a94ad3e0ed74bc23a7" nb="10.6.16" />
       <version md5="1d2ec8a70880f9a94ad3e0ed74bc23a7" nb="10.6.17" />
+      <version md5="1d2ec8a70880f9a94ad3e0ed74bc23a7" nb="10.6.18" />
       <version md5="f78c352fdc5564d6559ef6b633fc2572" nb="11.0.0" />
       <version md5="d45c777351264623945fa03e08c4937d" nb="11.0.0-alpha1" />
       <version md5="d45c777351264623945fa03e08c4937d" nb="11.0.0-beta1" />
@@ -3197,6 +3204,7 @@
       <version md5="51befca80721239d61efe93b07ca34f9" nb="11.4.5" />
       <version md5="51befca80721239d61efe93b07ca34f9" nb="11.4.6" />
       <version md5="51befca80721239d61efe93b07ca34f9" nb="11.4.7" />
+      <version md5="15931e46b4901b8bf27da0356a181059" nb="11.4.8" />
       <version md5="51befca80721239d61efe93b07ca34f9" nb="12.0.0-alpha1" />
     </file>
     <file url="core/misc/vertical-tabs.js">
@@ -3648,6 +3656,7 @@
       <version md5="f66fe507a1148c003378315259e1c006" nb="10.6.15" />
       <version md5="f66fe507a1148c003378315259e1c006" nb="10.6.16" />
       <version md5="f66fe507a1148c003378315259e1c006" nb="10.6.17" />
+      <version md5="f66fe507a1148c003378315259e1c006" nb="10.6.18" />
       <version md5="f66fe507a1148c003378315259e1c006" nb="11.0.0" />
       <version md5="83bccdfc85ea4dcfa48ff753e21a0d2e" nb="11.0.0-alpha1" />
       <version md5="83bccdfc85ea4dcfa48ff753e21a0d2e" nb="11.0.0-beta1" />
@@ -3730,6 +3739,7 @@
       <version md5="02e6db5028a56497a0accec03581ade1" nb="11.4.5" />
       <version md5="02e6db5028a56497a0accec03581ade1" nb="11.4.6" />
       <version md5="02e6db5028a56497a0accec03581ade1" nb="11.4.7" />
+      <version md5="02e6db5028a56497a0accec03581ade1" nb="11.4.8" />
       <version md5="02e6db5028a56497a0accec03581ade1" nb="12.0.0-alpha1" />
     </file>
     <file url="core/modules/ckeditor5/js/build/drupalImage.js">
@@ -3913,6 +3923,7 @@
       <version md5="dc941231a6ea48e9bef1cab51a01e0dd" nb="10.6.15" />
       <version md5="dc941231a6ea48e9bef1cab51a01e0dd" nb="10.6.16" />
       <version md5="dc941231a6ea48e9bef1cab51a01e0dd" nb="10.6.17" />
+      <version md5="dc941231a6ea48e9bef1cab51a01e0dd" nb="10.6.18" />
       <version md5="be11cd617d0bc96dee1a856733f88fc5" nb="11.0.0" />
       <version md5="be11cd617d0bc96dee1a856733f88fc5" nb="11.0.0-alpha1" />
       <version md5="be11cd617d0bc96dee1a856733f88fc5" nb="11.0.0-beta1" />
@@ -3995,6 +4006,7 @@
       <version md5="46e49e74d09becf406155e1730e9b3aa" nb="11.4.5" />
       <version md5="46e49e74d09becf406155e1730e9b3aa" nb="11.4.6" />
       <version md5="46e49e74d09becf406155e1730e9b3aa" nb="11.4.7" />
+      <version md5="46e49e74d09becf406155e1730e9b3aa" nb="11.4.8" />
       <version md5="b650940689419e3cf81d35d7b69da0d2" nb="12.0.0-alpha1" />
     </file>
     <file url="core/modules/ckeditor5/js/build/drupalMedia.js">
@@ -4178,6 +4190,7 @@
       <version md5="2202c069412bc0acc48e68dc1576ad62" nb="10.6.15" />
       <version md5="2202c069412bc0acc48e68dc1576ad62" nb="10.6.16" />
       <version md5="2202c069412bc0acc48e68dc1576ad62" nb="10.6.17" />
+      <version md5="2202c069412bc0acc48e68dc1576ad62" nb="10.6.18" />
       <version md5="b7e9ee6624160f8381800a8eef9089bf" nb="11.0.0" />
       <version md5="37882c987cf363f2471af34e0eaa98a4" nb="11.0.0-alpha1" />
       <version md5="37882c987cf363f2471af34e0eaa98a4" nb="11.0.0-beta1" />
@@ -4260,6 +4273,7 @@
       <version md5="d3cae41a4f59e22d29988181800f1747" nb="11.4.5" />
       <version md5="d3cae41a4f59e22d29988181800f1747" nb="11.4.6" />
       <version md5="d3cae41a4f59e22d29988181800f1747" nb="11.4.7" />
+      <version md5="d3cae41a4f59e22d29988181800f1747" nb="11.4.8" />
       <version md5="1cadde72c5703370b2df1176d3be0870" nb="12.0.0-alpha1" />
     </file>
     <file url="core/assets/vendor/ckeditor/ckeditor.js">
@@ -4968,6 +4982,7 @@
       <version md5="b8b06f331e552565b61ee96dec953bf1" nb="10.6.15" />
       <version md5="b8b06f331e552565b61ee96dec953bf1" nb="10.6.16" />
       <version md5="b8b06f331e552565b61ee96dec953bf1" nb="10.6.17" />
+      <version md5="b8b06f331e552565b61ee96dec953bf1" nb="10.6.18" />
       <version md5="8924543dff85f888a09af8a575bf1106" nb="11.0.0" />
       <version md5="f148e1bbc7732a7c62e5a4e15a501c9f" nb="11.0.0-alpha1" />
       <version md5="bbd4228fcc64465ac8043c0bd0e4d599" nb="11.0.0-beta1" />
@@ -5050,6 +5065,7 @@
       <version md5="804ed695f12c6857f87706e0cd2bc6c2" nb="11.4.5" />
       <version md5="804ed695f12c6857f87706e0cd2bc6c2" nb="11.4.6" />
       <version md5="804ed695f12c6857f87706e0cd2bc6c2" nb="11.4.7" />
+      <version md5="804ed695f12c6857f87706e0cd2bc6c2" nb="11.4.8" />
       <version md5="ab7cd6ce6e24bf6950a27ec9f15646e2" nb="12.0.0-alpha1" />
     </file>
     <changelog url="CHANGELOG.txt">
@@ -5746,6 +5762,7 @@
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="10.6.15" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="10.6.16" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="10.6.17" />
+      <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="10.6.18" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.0.0" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.0.0-alpha1" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.0.0-beta1" />
@@ -5828,6 +5845,7 @@
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.4.5" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.4.6" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.4.7" />
+      <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="11.4.8" />
       <version md5="17b60ebc07bbfb7a964c75a65a4fcf6d" nb="12.0.0-alpha1" />
     </changelog>
   </files>
